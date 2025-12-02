@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Trang Chủ</title>
+</head>
+<body class="bg-[#E3E3E3]">
+    <div id="header"></div>
+    <div id="banner"></div>
+    <div id="features"></div>
+    <div id="why"></div>
+     <div id="feedback"></div>
+    <div id="courses"></div>
+    <div id="question"></div>
+    <div id="contact"></div>
+    <div id="free"></div>
+    <div id="footer"></div>
+   
+    <main id="main-content">
+    </main>
+
+    <script>
+        async function loadHTML(elementId, filePath) {
+            try {
+                        const response = await fetch(filePath);
+                        if (response.ok) {
+                            const html = await response.text();
+                            const container = document.getElementById(elementId);
+                            container.innerHTML = html;
+                            const scripts = Array.from(container.querySelectorAll('script'));
+                            scripts.forEach(oldScript => {
+                                const newScript = document.createElement('script');
+                                if (oldScript.src) {
+                                    newScript.src = oldScript.src;
+                                    newScript.async = false;
+                                } else {
+                                    newScript.textContent = oldScript.textContent;
+                                }
+                                document.body.appendChild(newScript);
+                                oldScript.remove();
+                            });
+                        } else {
+                    console.error(`Lỗi tải ${filePath}: ${response.status}`);
+                }
+            } catch (error) {
+                console.error(`Lỗi tải ${filePath}:`, error);
+            }
+        }
+        loadHTML('header', 'pages/header.html');
+        loadHTML('banner', 'pages/banner.html');
+        loadHTML('features', 'pages/features.html');
+        loadHTML('feedback', 'pages/feedback.html');
+        loadHTML('why', 'pages/why.html');
+        loadHTML('courses', 'pages/courses.html');
+        loadHTML('question', 'pages/question.html');
+        loadHTML('contact', 'pages/contact.html');
+        loadHTML('free', 'pages/free.html');
+        loadHTML('footer', 'pages/footer.html');
+    </script>
+</body>
+</html>

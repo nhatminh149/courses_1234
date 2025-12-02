@@ -1,0 +1,112 @@
+<div class="bg-[#F9FCFF] py-16 items-center px-6 justify-center mx-auto py-16 w-[1920px]">
+    <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="inline-block px-4 py-1 rounded-md bg-gradient-to-r from-[#8a2be2] to-[#FFA94D] text-white font-bold text-sm">Liên hệ với chúng tôi</span>
+      <h2 class="mt-6 text-3xl md:text-4xl lg:text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-600 to-yellow-400">Bắt đầu hành trình chuyển đổi số</h2>
+      <p class="mt-4 text-gray-600 text-lg">Để lại thông tin, đội ngũ chúng tôi sẽ liên hệ tư vấn trong 24 giờ</p>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <div class="bg-gray-50 rounded-lg p-8">
+        <h3 class="text-2xl font-bold text-gray-900 mb-6">Gửi yêu cầu tư vấn</h3>
+        <form action="/submit-consultation" method="POST" class="space-y-4">
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Họ và tên *</label>
+              <input type="text" id="name" name="name" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
+            </div>
+            <div>
+              <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Số điện thoại *</label>
+              <input type="tel" id="phone" name="phone" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
+            </div>
+          </div>
+
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email *</label>
+            <input type="email" id="email" name="email" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
+          </div>
+
+          <div>
+            <label for="center-name" class="block text-sm font-medium text-gray-700 mb-1">Tên trung tâm</label>
+            <input type="text" id="center-name" name="center-name" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
+          </div>
+
+          <div>
+            <label for="size" class="block text-sm font-medium text-gray-700 mb-1">Quy mô (số học viên)</label>
+            <input type="text" id="size" name="size" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
+          </div>
+
+          <div>
+            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Tin nhắn</label>
+            <textarea id="message" name="message" rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">Cho chúng tôi biết thêm về nhu cầu của bạn...</textarea>
+          </div>
+
+          <hr class="my-4">
+
+          <button type="submit" class="w-full bg-gradient-to-r from-pink-500 via-purple-600 to-yellow-400 text-white py-3 rounded-md font-semibold hover:opacity-95 transition">→ Đặt lịch tư vấn</button>
+
+          <p class="text-xs text-gray-500 text-center mt-4">Bằng việc gửi form, bạn đồng ý với điều khoản sử dụng và chính sách bảo mật của chúng tôi.</p>
+        </form>
+      </div>
+
+      <div class="space-y-6">
+
+        <div class="w-[552px] h-[164px] border-3 border-[#D0D0F6] bg-[#EAEDFC] rounded-lg p-6 hover:shadow-md transition">
+          <div class="flex items-start gap-4 mb-4">
+            <img src="assets/images/hotline.png" alt="Hotline" class="w-[68px] h-[68px]">
+            <div class="ml-[-20px]">
+              <h4 class="font-semibold text-gray-900">Hotline hỗ trợ</h4>
+              <p class="text-sm text-gray-600">Gọi ngay để được tư vấn miễn phí</p>
+            </div>
+          </div>
+          <p class="ml-[65px] mt-[-40px] text-lg font-bold text-purple-600 mb-1">1900 xxxx</p>
+          <p class="ml-[65px] text-sm text-gray-500">Thứ 2 - Thứ 7: 8:00 - 20:00</p>
+        </div>
+
+        <div class="w-[552px] h-[164px] border-3 border-[#F9D6E6] bg-[#F8F1F8] rounded-lg p-6 hover:shadow-md transition">
+          <div class="flex items-start gap-4 mb-4">
+            <img src="assets/images/email.png" alt="Email" class="w-[68px] h-[68px]">
+            <div class="ml-[-20px]">
+              <h4 class="font-semibold text-gray-900">Email</h4>
+              <p class="text-sm text-gray-600">Gửi Email cho chúng tôi</p>
+            </div>
+          </div>
+          <p class="ml-[65px] mt-[-40px] text-lg font-bold text-pink-500 mb-1">support@centerhub.vn</p>
+          <p class="ml-[65px] text-sm text-gray-500">Phản hồi trong vòng 24h</p>
+        </div>
+
+        <div class="w-[552px] h-[164px] border-3 border-[#CDF0F0] bg-[#EBF8FA] rounded-lg p-6 hover:shadow-md transition">
+          <div class="flex items-start gap-4 mb-4">
+            <img src="assets/images/dc.png" alt="Address" class="w-[68px] h-[68px]">
+            <div class="ml-[-20px]">
+              <h4 class="font-semibold text-gray-900">Văn phòng</h4>
+              <p class="text-sm text-gray-600">Tòa nhà Startower</p>
+            </div>
+          </div>
+          <p class="ml-[65px] mt-[-40px] text-sm text-gray-700">Dương Đình Nghệ, Yên Hòa, Cầu Giấy, Hà Nội, Việt Nam</p>
+        </div>
+
+        <div class="w-[552px] h-[232px]  border-3 border-[#FBE6CF] bg-[#F9F5F1] from-purple-50 to-pink-50 rounded-lg p-6 mt-8">
+          <h4 class="font-semibold text-gray-900 mb-4">Tại sao nên liên hệ ngay?</h4>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <img src="assets/images/CheckCircle.png" alt="check" class="w-5 h-5 mt-0.5 flex-shrink-0">
+              <span class="text-sm text-gray-700">Tư vấn miễn phí không ràng buộc</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <img src="assets/images/CheckCircle.png" alt="check" class="w-5 h-5 mt-0.5 flex-shrink-0">
+              <span class="text-sm text-gray-700">Demo trực tiếp 1-1 qua video call</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <img src="assets/images/CheckCircle.png" alt="check" class="w-5 h-5 mt-0.5 flex-shrink-0">
+              <span class="text-sm text-gray-700">Báo giá chi tiết theo quy mô</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <img src="assets/images/CheckCircle.png" alt="check" class="w-5 h-5 mt-0.5 flex-shrink-0">
+              <span class="text-sm text-gray-700">Hỗ trợ setup trong 24 giờ</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
