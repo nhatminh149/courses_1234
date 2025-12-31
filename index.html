@@ -12,43 +12,46 @@
     <div id="banner"></div>
     <div id="features"></div>
     <div id="why"></div>
-     <div id="feedback"></div>
+    <div id="feedback"></div>
     <div id="courses"></div>
     <div id="question"></div>
     <div id="contact"></div>
     <div id="free"></div>
     <div id="footer"></div>
-   
+    
     <main id="main-content">
     </main>
 
     <script>
         async function loadHTML(elementId, filePath) {
             try {
-                        const response = await fetch(filePath);
-                        if (response.ok) {
-                            const html = await response.text();
-                            const container = document.getElementById(elementId);
-                            container.innerHTML = html;
-                            const scripts = Array.from(container.querySelectorAll('script'));
-                            scripts.forEach(oldScript => {
-                                const newScript = document.createElement('script');
-                                if (oldScript.src) {
-                                    newScript.src = oldScript.src;
-                                    newScript.async = false;
-                                } else {
-                                    newScript.textContent = oldScript.textContent;
-                                }
-                                document.body.appendChild(newScript);
-                                oldScript.remove();
-                            });
+                const response = await fetch(filePath);
+                if (response.ok) {
+                    const html = await response.text();
+                    const container = document.getElementById(elementId);
+                    container.innerHTML = html;
+                    const scripts = Array.from(container.querySelectorAll('script'));
+                    scripts.forEach(oldScript => {
+                        const newScript = document.createElement('script');
+                        if (oldScript.src) {
+                            newScript.src = oldScript.src;
+                            newScript.async = false;
                         } else {
+                            newScript.textContent = oldScript.textContent;
+                        }
+                        document.body.appendChild(newScript);
+                        oldScript.remove();
+                    });
+                    if (window.tailwind && window.tailwind.config) {
+                    }
+                } else {
                     console.error(`Lỗi tải ${filePath}: ${response.status}`);
                 }
             } catch (error) {
                 console.error(`Lỗi tải ${filePath}:`, error);
             }
         }
+
         loadHTML('header', 'pages/header.html');
         loadHTML('banner', 'pages/banner.html');
         loadHTML('features', 'pages/features.html');
